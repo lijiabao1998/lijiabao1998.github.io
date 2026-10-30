@@ -1,8 +1,8 @@
 {
-  "source_commit": "e44d64566ddbc4e260912b60615a9689f811d979",
-  "source_tree": "1844cf17dc5a1396d388d885802ed00c1f5cc556",
-  "candidate_commit": "4e4e315240dfbd67fe6d4fe7b8f982efbcf252cc",
-  "build": "fresh Vite production build; GOMAXPROCS=1 NODE_OPTIONS=--max-old-space-size=128",
-  "verification": "complete local regressions; exact candidate Ubuntu dynamic QA 41043592775; owner accepted mobile landscape clip; capture fps is not physical-device performance",
-  "built_at": "2026-10-30T11:08:04.729255+00:00"
+  "source_commit": "ec32417f27bbea46abd39488edfa28b1a93dc721",
+  "source_tree": "5f023891e71d621ef3fbdaf6d4f1d92225e47b08",
+  "candidate_commit": "680c736ebc59d4b973cf6cdc67872e2b49594273",
+  "build": "fresh exact-main Vite build; 29 local regression scripts passed",
+  "verification": "owner authorized direct play without new video; candidate dynamic CI result unconfirmed, no device smoothness claim",
+  "built_at": "2026-10-30T12:00:33.167885+00:00"
 }
