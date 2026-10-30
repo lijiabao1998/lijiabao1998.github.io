@@ -1,1 +1,8 @@
-{"source_commit": "27ed3fccfd00c150a1ef6e3ced0dc33861156657", "source_tree": "014164864b1eda30b620fd9c0159a15a45f224c8", "build": "local fresh Vite production build; GOMAXPROCS=1", "verification": "29 test scripts; Ubuntu identity QA 41021882043 and survivor systems QA 41021882050; desktop/mobile natural resume passed", "built_at": "2026-10-30T07:50:20.483137+00:00"}
+{
+  "source_commit": "e44d64566ddbc4e260912b60615a9689f811d979",
+  "source_tree": "1844cf17dc5a1396d388d885802ed00c1f5cc556",
+  "candidate_commit": "4e4e315240dfbd67fe6d4fe7b8f982efbcf252cc",
+  "build": "fresh Vite production build; GOMAXPROCS=1 NODE_OPTIONS=--max-old-space-size=128",
+  "verification": "complete local regressions; exact candidate Ubuntu dynamic QA 41043592775; owner accepted mobile landscape clip; capture fps is not physical-device performance",
+  "built_at": "2026-10-30T11:08:04.729255+00:00"
+}

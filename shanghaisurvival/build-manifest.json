@@ -1,21 +1,22 @@
 {
-  "source_commit": "27ed3fccfd00c150a1ef6e3ced0dc33861156657",
-  "source_tree": "014164864b1eda30b620fd9c0159a15a45f224c8",
+  "source_commit": "e44d64566ddbc4e260912b60615a9689f811d979",
+  "source_tree": "1844cf17dc5a1396d388d885802ed00c1f5cc556",
   "sha256": {
     "assets/main-B6cm6il0.js": "36ecb296b1d73513f5b7e16223de5f7dfd41c747be1c9cb0f8c988a671bf7317",
     "assets/main-BMtHSpV3.css": "cc2e1bb54bd7cb82d6e26ea539fd32f67b2878b363d2b0f0c9147a18da1fa037",
     "assets/spatial-C-Cu98Sz.js": "711499621abde4ba2ce9d1e0fdd761823c9bc8f8b626b1aa7ca2e33ef995984d",
     "assets/stress-DPaVuEgz.js": "88037b48eff36e68aefb6b11a73ec1402c059f4017525e34d0b78e1751c23a5c",
+    "assets/survival-B85xnFdP.js": "83cefd0adb3a11784091644606b1028917a1c41796b3bd9bff53b632c6f940a3",
     "assets/survival-BSPV7vDG.css": "fc031504bbb41b3ddbe332a71ae41daa07fe1f8ac9bb3d49862f7b3362fd5a44",
-    "assets/survival-DY7eGcEB.js": "97400f70df7f7e0e436a863028e7f9d2241c4895daacaaddbf3a33a0ec8865bd",
     "city.html": "5810e584b06d6c89b40d65af59a40ae179943f8a421a798e5e9f6e7ec730551e",
     "credits.html": "5146c64ab4fff30c0082d9bb0decc1ba20dec95e838fef1af006e8e3e932e380",
     "data/block.json": "53ed63f1536cc6cb0a50160164a9ddcdb5d283a0de940821a8239d65071efe92",
     "data/block_1000m.json": "63a6b6ef12eab6e2efb598c434657f6410df6e6189b8ea3ffcddfcb4ebc1565e",
     "data/block_250m.json": "8f023e55d3b270fc0ecae1f2c4c897f3dde45dd8b01bfb35940fa29b40265c6d",
-    "index.html": "3d28f9e2ee94d73e4bb0babc3a5648e50c41a4c74c29bf14822a132b3ba00ad1",
+    "index.html": "6ed787ad67ddf1fcca7001fe0abd1eb14f14f08014561d8c9d5faaca84717270",
     "stress.html": "4c5f743edfee3ea17148e35c705a23ed1af34782922f959b3f19a58626922a21",
-    "survival.html": "3d28f9e2ee94d73e4bb0babc3a5648e50c41a4c74c29bf14822a132b3ba00ad1",
-    "version.json": "da84c2d33f82f7f132700b8116eb5023500b9fc3703988d3dfad72c075554907"
-  }
+    "survival.html": "6ed787ad67ddf1fcca7001fe0abd1eb14f14f08014561d8c9d5faaca84717270",
+    "version.json": "086934f9334ac5ebd004ab93f8517558642d4ec806c8d6ea3187af04aa20d525"
+  },
+  "retained_legacy_assets": "previous hashed assets retained for open cached pages; not dependencies of this build"
 }
