@@ -1,1 +1,8 @@
-{"source_commit": "5eae3e5207ad355dc0e41bda8321620ec17dec1f", "source_tree": "eb9fca18ce4f6cc02695ab473cfebb707025cd30", "build": "local Vite 5.4.21; GOMAXPROCS=1", "verification": "TypeScript and 21 test scripts passed; Ubuntu screenshot run 40997758549; owner accepted images", "built_at": "2026-10-30T04:13:18.386406+00:00"}
+{
+  "source_commit": "f59881ba99684523648cd526785a1a4b5f6555b8",
+  "candidate_commit": "acbae16b3a21f3a3b0028f7ebebe9bbf400e628f",
+  "source_tree": "eef7f615bb3f34d8b2f726a0239f20b66949ad8f",
+  "build": "local Vite 5.4.21; GOMAXPROCS=1",
+  "verification": "25 test scripts and build passed; Ubuntu browser run 41007337279; owner accepted candidate and authorized release",
+  "built_at": "2026-10-30T05:39:07.430634+00:00"
+}
