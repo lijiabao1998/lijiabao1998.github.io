@@ -1,8 +1,8 @@
 {
-  "source_commit": "ec32417f27bbea46abd39488edfa28b1a93dc721",
-  "source_tree": "5f023891e71d621ef3fbdaf6d4f1d92225e47b08",
-  "candidate_commit": "680c736ebc59d4b973cf6cdc67872e2b49594273",
-  "build": "fresh exact-main Vite build; 29 local regression scripts passed",
-  "verification": "owner authorized direct play without new video; candidate dynamic CI result unconfirmed, no device smoothness claim",
-  "built_at": "2026-10-30T12:00:33.167885+00:00"
+  "source_commit": "839dc858ac5d8f635b97687c6e03cdd5e5f9e6b3",
+  "source_tree": "44026d6012b661ce80790edd15d11f2cfeb78d32",
+  "candidate_commit": "84c308604ee73c9aee6288951ce9acf2efbc9018",
+  "built_at": "2026-10-30T19:39:27.946654+00:00",
+  "verification": "Fresh local Vite build; local rule and geometry tests previously passed. 16 prior layout/new-save/legacy-save/infill traversal checks passed. Full 18 room desktop/mobile real-input operations remain UNVERIFIED; latest natural-walk QA died. No Shanghai CI triggered for release.",
+  "save_compatibility": "Legacy saves retain original layout. New games opt into four fictional enterable infill shells and nine furnished existing rooms."
 }
