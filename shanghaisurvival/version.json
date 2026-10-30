@@ -1,8 +1,8 @@
 {
-  "source_commit": "839dc858ac5d8f635b97687c6e03cdd5e5f9e6b3",
-  "source_tree": "44026d6012b661ce80790edd15d11f2cfeb78d32",
-  "candidate_commit": "84c308604ee73c9aee6288951ce9acf2efbc9018",
-  "built_at": "2026-10-30T19:39:27.946654+00:00",
-  "verification": "Fresh local Vite build; local rule and geometry tests previously passed. 16 prior layout/new-save/legacy-save/infill traversal checks passed. Full 18 room desktop/mobile real-input operations remain UNVERIFIED; latest natural-walk QA died. No Shanghai CI triggered for release.",
-  "save_compatibility": "Legacy saves retain original layout. New games opt into four fictional enterable infill shells and nine furnished existing rooms."
+  "source_commit": "411f2d6fb3c4cbb74d647a70223e8588db776593",
+  "source_tree": "494b95991bc8f0031194d05966e631a73b15c9ed",
+  "candidate_commit": "85cbc9ebefac2404c30687c9f4d5fd4af13b8672",
+  "built_at": "2026-10-30T20:20:30.686597+00:00",
+  "verification": "Fresh local Vite production build and 47 local regression scripts passed; actual backpack tool-selection assertion passed. Browser screenshots/touch/hand-model rendered placement remain UNVERIFIED: Chromium socket EPERM. User explicitly approved PR8 release. No Shanghai CI triggered.",
+  "save_compatibility": "Legacy layouts unchanged. Tools only granted on explicit pickup; optional ownedTools strictly validated. Original supply depletion preserved."
 }
