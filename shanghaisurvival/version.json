@@ -1,1 +1,1 @@
-{"source_commit":"02066f3303b439eab67e1ef868972b47168210ee","source_tree":"afa4ba08c89100dcf2e3b3c90138b637d8ab86db","build":"local Vite; Pages deployment only","verification":"non-browser tests and build; no browser acceptance"}
+{"source_commit": "5352f3d587d83a2f1ae463993a88a9f1d27b65a3", "source_tree": "240a15b5664ac3db3f28bbc1d0ae2e842ed042f1", "build": "local Vite 5.4.21; GOMAXPROCS=1; Pages deployment only", "verification": "TypeScript and 20 test-*.mjs files passed; no browser acceptance", "built_at": "2026-10-30T03:16:18Z"}
