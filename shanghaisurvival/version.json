@@ -1,8 +1,1 @@
-{
-  "source_commit": "f59881ba99684523648cd526785a1a4b5f6555b8",
-  "candidate_commit": "acbae16b3a21f3a3b0028f7ebebe9bbf400e628f",
-  "source_tree": "eef7f615bb3f34d8b2f726a0239f20b66949ad8f",
-  "build": "local Vite 5.4.21; GOMAXPROCS=1",
-  "verification": "25 test scripts and build passed; Ubuntu browser run 41007337279; owner accepted candidate and authorized release",
-  "built_at": "2026-10-30T05:39:07.430634+00:00"
-}
+{"source_commit": "27ed3fccfd00c150a1ef6e3ced0dc33861156657", "source_tree": "014164864b1eda30b620fd9c0159a15a45f224c8", "build": "local fresh Vite production build; GOMAXPROCS=1", "verification": "29 test scripts; Ubuntu identity QA 41021882043 and survivor systems QA 41021882050; desktop/mobile natural resume passed", "built_at": "2026-10-30T07:50:20.483137+00:00"}
