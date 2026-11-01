@@ -11,10 +11,11 @@
     "data/block.json": "53ed63f1536cc6cb0a50160164a9ddcdb5d283a0de940821a8239d65071efe92",
     "data/block_1000m.json": "63a6b6ef12eab6e2efb598c434657f6410df6e6189b8ea3ffcddfcb4ebc1565e",
     "data/block_250m.json": "8f023e55d3b270fc0ecae1f2c4c897f3dde45dd8b01bfb35940fa29b40265c6d",
-    "index.html": "5810e584b06d6c89b40d65af59a40ae179943f8a421a798e5e9f6e7ec730551e",
+    "index.html": "97868fd92ff2b53c72c0322220fd7e274b051a9433d01db4021908f8984468c2",
     "stress.html": "4c5f743edfee3ea17148e35c705a23ed1af34782922f959b3f19a58626922a21",
     "survival.html": "97868fd92ff2b53c72c0322220fd7e274b051a9433d01db4021908f8984468c2",
     "version.json": "382e29546dc37362da4d8c0930c6d991b43daccd99f7be69d29e02ab7a46eaa4"
   },
-  "retained_legacy_assets": "Existing old hashed assets preserved for cached clients"
+  "retained_legacy_assets": "Existing old hashed assets preserved for cached clients",
+  "entry_mapping": "Directory index is the survival game; original city prototype remains at city.html."
 }
