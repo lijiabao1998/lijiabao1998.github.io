@@ -1,0 +1,85 @@
+name: One-time Shanghai V66 release
+on:
+  push:
+    branches: [owner/shanghai-v66-release-20261101]
+permissions:
+  contents: write
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: lijiabao1998/shanghaisurvival
+          ref: ca3841790bce7a4067fe2fae73477ca6242a871e
+          path: source
+          persist-credentials: false
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          path: site
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+          cache-dependency-path: source/web/package-lock.json
+      - name: Build verified exact source
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$(git -C source rev-parse HEAD)" = "ca3841790bce7a4067fe2fae73477ca6242a871e"
+          cd source/web
+          npm ci
+          npm run build
+          shopt -s nullglob
+          for f in tools/test-*.mjs; do
+            test -f "$f"
+            node "$f"
+          done
+      - name: Stage only Shanghai static assets and version receipts
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -f source/web/dist/survival.html
+          test -f source/web/dist/index.html
+          test -d source/web/dist/assets
+          mkdir -p site/shanghaisurvival
+          rsync -a source/web/dist/ site/shanghaisurvival/
+          python3 - <<'PY'
+          from pathlib import Path
+          import json, hashlib, subprocess
+          from datetime import datetime, timezone
+          src=Path('source/web/dist')
+          dest=Path('site/shanghaisurvival')
+          commit=subprocess.check_output(['git','-C','source','rev-parse','HEAD'],text=True).strip()
+          tree=subprocess.check_output(['git','-C','source','rev-parse','HEAD^{tree}'],text=True).strip()
+          version={'source_commit':commit,'source_tree':tree,'candidate_commit':'4b040dfdb9239b71afd3fb32a7226401f19c7cca','built_at':datetime.now(timezone.utc).isoformat(),'verification':'Shanghai post-merge CI 41282925858 passed; original V66 4-size native QA 41184198582 passed. Physical Android and unpushed local changes not included.'}
+          (dest/'version.json').write_text(json.dumps(version,ensure_ascii=False,indent=2)+'\n',encoding='utf8')
+          sha={}
+          for p in src.rglob('*'):
+            if p.is_file():
+              rel=p.relative_to(src)
+              sha[rel.as_posix()]=hashlib.sha256((dest/rel).read_bytes()).hexdigest()
+          sha['version.json']=hashlib.sha256((dest/'version.json').read_bytes()).hexdigest()
+          manifest={'source_commit':commit,'source_tree':tree,'sha256':dict(sorted(sha.items())),'retained_legacy_assets':'Existing old hashed assets preserved for cached clients'}
+          (dest/'build-manifest.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+'\n',encoding='utf8')
+          print('Shanghai release files',len(sha))
+          PY
+      - name: Enforce Shanghai-only write and deploy by ordinary fast-forward push
+        shell: bash
+        run: |
+          set -euo pipefail
+          cd site
+          git fetch origin main
+          test "$(git rev-parse HEAD)" = "$(git rev-parse origin/main)" || { echo 'official site main moved, stop'; exit 1; }
+          git add -A -- shanghaisurvival/
+          while IFS= read -r path; do
+            [[ "$path" == shanghaisurvival/* ]] || { echo "outside Shanghai folder: $path"; exit 1; }
+          done < <(git diff --cached --name-only)
+          git diff --cached --check
+          git config user.name "Shanghai Release Automation"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Publish Shanghai V66 ca384179 verified build"
+          git push origin HEAD:refs/heads/main
