@@ -1,0 +1,7 @@
+{
+  "source_commit": "ca3841790bce7a4067fe2fae73477ca6242a871e",
+  "source_tree": "77e114e7aac8e3e25ecd3db6fdb8d2ccf6152943",
+  "candidate_commit": "4b040dfdb9239b71afd3fb32a7226401f19c7cca",
+  "built_at": "2026-11-01T07:09:18.657527+00:00",
+  "verification": "Shanghai post-merge CI 41282925858 passed; original V66 4-size native QA 41184198582 passed. Physical Android and unpushed local changes not included."
+}
